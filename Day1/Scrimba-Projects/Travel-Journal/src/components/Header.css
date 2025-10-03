@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+}
+
+.header-container{
+    padding: 15px;
+    background-color: rgb(203, 77, 77);
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header-logo{
+    width: 40px;
+}
+
+nav > span {
+    font-size: 1.2rem;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    color: #fff;
+}
