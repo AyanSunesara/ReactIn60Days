@@ -1,83 +1,87 @@
-*{
-    margin : 0;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: Insert;
+body {
+  font-family: Insert; /* 'Insert' was invalid */
 }
 
 article.journal-entry {
-    display: flex;
-    align-items: flex-start; /* Ensure both image and text align to the top */
-    margin-bottom: 30px;     /* Optional: add space between entries */
-    padding-top: 50px;
-}
-
-article.journal-entry .info-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 5px;      /* add space from the top so text isn’t stuck */
-    flex: 1;               /* allow it to grow to fill space */
-}
-
-
-article.journal-entry .marker {
-    width: 12px;
-    margin-right: 4px;
-    margin-bottom: 40px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding: 50px;
+  max-width: 100%;
+  overflow: hidden;
+  gap: 20px; /* cleaner spacing instead of margin-right */
 }
 
 article.journal-entry .main-image-container {
-    width: 125px;
-    height: 168px;
-    overflow: hidden;
-    flex-shrink: 0;
-    margin-right: 19px;
-    padding-left: 50px;
+  width: 125px;
+  height: 168px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: 5px;
 }
 
 article.journal-entry .main-image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+article.journal-entry .info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 168px; /* match image height */
+  overflow: hidden;
+  flex: 1;
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+article.journal-entry .marker {
+  width: 12px;
+  margin-right: 4px;
 }
 
 .info-container span.country {
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    margin-right: 12px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-right: 12px;
 }
 
 .info-container a {
-    color: #2B283A;
-    font-size: 0.7rem;
+  color: #2B283A;
+  font-size: 0.7rem;
 }
 
 .info-container a:visited {
-    color: #918E9B;
+  color: #918E9B;
 }
 
 .info-container h2.entry-title {
-    margin-top: 7px;
-    margin-bottom: 17px;
+  margin: 10px 0;
 }
 
 .info-container p.trip-dates {
-    font-weight: bold;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
 }
 
 .info-container p.entry-text {
-    line-height: 1.5;
-    padding-top: 10px;
-    font-size: 0.95rem;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;  
-    overflow: hidden;
-}
-
-.info-header{
-    display: flex;
-    justify-content: flex-start;
+  line-height: 1.4;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
